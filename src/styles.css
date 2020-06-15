@@ -1,0 +1,259 @@
+/* You can add global styles to this file, and also import other style files */
+/* Fontawesome */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap');
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+.section {
+    background-color: #f2f2fc;
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    /* position: fixed; */
+    left: 270px;
+    /* top: 0;
+    right: 0; */
+    /* bottom: 0;
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 1; */
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.section.back-section {
+    z-index: 1;
+}
+
+.section.active {
+    opacity: 1;
+    z-index: 2;
+    -webkit-animation: slideSection 1s ease;
+    animation: slideSection 1s ease;
+}
+
+.section .container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #302e4d;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    /* background-color: gray; */
+}
+
+.section-title h2::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.section-title h2::after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+    /* background-color: blue; */
+}
+
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-content {
+    padding-left: 270px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    /* background-color: red; */
+}
+
+.btn {
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    padding: 12px 15px;
+    color: #ffffff;
+    border-radius: 40px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+
+/* SKIN */
+
+.aside .logo a::before {
+    border-top: 4px solid #27ae60;
+    border-left: 4px solid #27ae60;
+}
+
+.aside .logo a::after {
+    border-bottom: 4px solid #27ae60;
+    border-right: 4px solid #27ae60;
+}
+
+.cert2 .cert2-item-inner .cert2-info .cert2-local a,
+.cert .cert-item .cert-item-inner .icon .fa,
+.about .about-content .about-text h3 span,
+.aside .nav li a:hover,
+.aside .nav li a.active {
+    color: #27ae60;
+}
+
+.cert2 .cert2-item-inner .cert2-img .cert2-date,
+.cert .cert-item .cert-item-inner:hover .icon,
+.about .about-content .timeline .circle-dot,
+.about .about-content .timeline .timeline-item::before,
+.about .about-content .skills .skill-item .progress-in,
+.btn,
+.section-title h2::before,
+.section-title h2::after,
+.aside .nav-toggler span,
+.aside .nav-toggler span::before,
+.aside .nav-toggler span::after,
+.home .intro .social a {
+    background-color: #27ae60;
+}
+
+/* Responsive */
+
+@media (max-width:1199px) {
+
+    .main-content {
+        padding-left: 0 !important;
+    }
+
+    .aside .nav-toggler {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        left: 30px !important;
+    }
+
+    .aside .nav-toggler.open {
+        left: 300px !important;
+    }
+
+    .aside {
+        left: -270px !important;
+    }
+
+    .aside.open {
+        left: 0px !important;
+    }
+
+    .section {
+        left: 0;
+    }
+
+    .section.open {
+        left: 270px !important;
+    }
+
+    .about .about-content .personal-info .info-item p span {
+        display: inline-block !important;
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width:991px) {
+
+    .cert2 .cert2-item,
+    .portfolio .portfolio-item,
+    .cert .cert-item {
+        -ms-flex: 0 0 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+}
+
+@media (max-width:767px) {
+
+    .contact .contact-form .col-6,
+    .cert2 .cert2-item,
+    .cert .cert-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info {
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .portfolio .portfolio-filter button {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width:575px) {
+
+    .about .about-content .skills .skill-item,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item {
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}

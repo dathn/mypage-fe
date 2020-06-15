@@ -1,0 +1,21 @@
+<div class="aside">
+    <!-- Aside -->
+    <div class="logo">
+        <a href="#">DatHN</a>
+    </div>
+    <!-- Button -->
+    <div class="nav-toggler" (click)="navClick()">
+        <span></span>
+    </div>
+    <!-- Nav -->
+    <ul class="nav">
+        <li><a (click)="navClick()" routerLink="/home" routerLinkActive="active"><i class="fa fa-home"> Home</i></a></li>
+        <li><a (click)="navClick()" routerLink="/about" routerLinkActive="active"><i class="fa fa-user"> About</i></a></li>
+        <li><a (click)="navClick()" routerLink="/certs" routerLinkActive="active"><i class="fa fa-certificate"> Certification</i></a></li>
+        <!-- <li><a (click)="reset()" href=""><i class="fa fa-envelope"> Skills</i></a></li>
+        <li><a (click)="reset()" href=""><i class="fa fa-comments"> Contact</i></a></li> -->
+    </ul>
+    <div class="copyright-text">
+        Dathn
+    </div>
+</div>
