@@ -159,9 +159,9 @@
 }
 
 .home .intro img {
-    height: 200px;
+    height: auto;
     width: 200px;
-    border-radius: 0%;
+    border-radius: 5%;
     display: inline-block;
     border: 8px solid #ffffff;
 }
